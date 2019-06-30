@@ -11,6 +11,6 @@ public class BasicAI : MonoBehaviour
     void Update()
     {
         transform.LookAt(target);
-        transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+        transform.Translate(Vector3.forward * 1 * Time.deltaTime);
     }
 }
