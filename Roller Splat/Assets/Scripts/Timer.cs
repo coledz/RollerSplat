@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         countdown.text = ("" + timeLeft);
+        PlayerPrefs.SetInt("Time Left", timeLeft);
         EndGame();
     }
 
@@ -36,7 +37,7 @@ public class Timer : MonoBehaviour
 
     void EndGame()
     {
-        if(timeLeft == 0)
+        if(timeLeft <= 0)
         {
             SceneManager.LoadScene(2);
         }
