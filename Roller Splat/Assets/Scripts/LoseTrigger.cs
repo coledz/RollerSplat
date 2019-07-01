@@ -7,11 +7,15 @@ public class LoseTrigger : MonoBehaviour
 {
 
     private void OnTriggerEnter(Collider other)
-    {
+    {	
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(3);
         }
+		
+		else if (gameObject.tag != "Player")
+			
+         return;
     }
 
 }
