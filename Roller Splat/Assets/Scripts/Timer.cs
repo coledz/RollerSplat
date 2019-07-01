@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     {
         if(timeLeft <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
