@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BasicAI : MonoBehaviour
 {
-    public Transform target;
+ public Transform target;
     public Transform myTransform;
+	
 
     // Update is called once per frame
     void Update()
