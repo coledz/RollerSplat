@@ -6,16 +6,21 @@ using UnityEngine.SceneManagement;
 public class LoseTrigger : MonoBehaviour
 {
 
+
     private void OnTriggerEnter(Collider other)
-    {	
-        if (other.gameObject.CompareTag("Player"))
+    {
+        if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(3);
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
+            {
+                SceneManager.LoadScene("LoseGame");
+            }
+
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            }
         }
-		
-		else if (gameObject.tag != "Player")
-			
-         return;
     }
 
 }
